@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Sorting Visualizer</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="#" onclick="window.location.reload()">♫ SORTING VISUALIZER ♫</a>
+            <ul>
+                <li onclick="initialise('bubble')">Bubble Sort</li>
+                <li onclick="initialise('selection')">Selection Sort</li>
+                <li onclick="initialise('insertion')">Insertion Sort</li>
+                <li onclick="initialise('quick')">Quick Sort</li>
+            </ul>
+            <div class="menu-toggler" onclick="menuToggle()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <aside>
+                <ul>
+                    <li onclick="initialise('bubble')">Bubble Sort</li>
+                    <li onclick="initialise('selection')">Selection Sort</li>
+                    <li onclick="initialise('insertion')">Insertion Sort</li>
+                    <li onclick="initialise('quick')">Quick Sort</li>
+                </ul>
+            </aside>
+        </nav>
+        <div class="container">
+            <div class="sort-algorithm-heading">
+                <h1>Bubble Sort</h1>
+            </div>
+            <div class="user-input">
+                <label for="input-elements">Elements:</label>
+                <input type="number" name="input-elements" value="5" min="10" max="100" step="5" />
+                <button onclick="generateArray()">Generate Array</button>
+                <button class="sort" onclick="play()">Sort!</button>
+            </div>
+            <div class="array-elements"></div>
+        </div>
+        <div class="information">
+            <div class="soft-cover">
+                <div class="description">
+                    <h2>Description</h2>
+                    <div class="description-text"></div>
+                </div>
+                <div class="table-box">
+                    <h2>Complexity</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Average Complexity</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Best Case</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Worst Case</th>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <th>Space Complexity</th>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="implementation">
+                    <h2>Implementations</h2>
+                    <div class="code-menu">
+                        <div class="menu-btns">
+                            <button onclick="showCode('c')" class="menu-btn-activated"><img src="assets/c_icon.png" width="32" height="32" title="C" alt="C" /></button>
+                            <button onclick="showCode('cpp')"><img src="assets/cpp_icon.png" width="32" height="32" title="C++" alt="C++" /></button>
+                            <button onclick="showCode('java')"><img src="assets/java_icon.png" width="32" height="32" title="Java" alt="Java" /></button>
+                            <button onclick="showCode('javascript')"><img src="assets/javascript_icon.png" width="32" height="32" title="JavaScript" alt="JavaScript" /></button>
+                            <button onclick="showCode('python')"><img src="assets/python_icon.png" width="32" height="32" title="Python" alt="Python" /></button>
+                        </div>
+                        <div class="code-content">
+                            <pre></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright © 2024 Yashpal. All Rights Reserved</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
